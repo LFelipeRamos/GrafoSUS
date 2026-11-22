@@ -32,3 +32,16 @@ void adicionarAresta(GRAFO *grafo, int origem, int destino, int tempo) {
 
     grafo->vertices[origem].lista = nova;
 }
+
+void montarGrado(GRAFO *grafo) {
+    adicionarAresta(grafo, 0, 1, 5); // A -> B
+    adicionarAresta(grafo, 0, 2, 12); // A -> C
+
+    adicionarAresta(grafo, 1, 2, 6); // B -> C
+    adicionarAresta(grafo, 1, 3, 14); // B -> D
+
+    adicionarAresta(grafo, 2, 3, 7); // C -> D
+    adicionarAresta(grafo, 2, 4, 18); // C -> E
+
+    adicionarAresta(grafo, 3, 4, 8); // D -> E
+}

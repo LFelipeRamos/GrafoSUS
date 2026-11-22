@@ -20,6 +20,7 @@ typedef struct {
 
 GRAFO *criarGrafo();
 void adicionarAresta(GRAFO *grafo, int origem, int destino, int tempo);
+void montarGrado();
 void exibirGrafo(GRAFO *grafo);
 void liberarGrafo(GRAFO *grafo);
 
