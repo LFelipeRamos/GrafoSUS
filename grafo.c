@@ -45,3 +45,27 @@ void montarGrado(GRAFO *grafo) {
 
     adicionarAresta(grafo, 3, 4, 8); // D -> E
 }
+
+void exibirGrafo(GRAFO *grafo) {
+    printf("\n\t* REDE DE ATENDIMENTO *\t\n");
+
+    for (int i = 0; i < QTD_VERTICES; i++) {
+        printf("%c -> ", grafo->vertices[i].nome);
+
+        ARESTA *atual = grafo->vertices[i].lista;
+
+        if (atual == NULL) printf("Nenhum destino.");
+
+        while(atual != NULL) {
+            printf("%c (%d min)",
+                grafo->vertices[atual->destino].nome,
+                atual->tempo);
+
+            atual = atual->prox;
+
+            if (atual != NULL) printf(", ");
+        }
+
+        printf("\n");
+    }
+}
