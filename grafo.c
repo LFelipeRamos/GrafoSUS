@@ -69,3 +69,20 @@ void exibirGrafo(GRAFO *grafo) {
         printf("\n");
     }
 }
+
+void liberarGrafo(GRAFO *grafo) {
+    if (grafo == NULL) return;
+
+    for (int i = 0; i < QTD_VERTICES; i++) {
+        ARESTA *atual = grafo->vertices[i].lista;
+
+        while (atual != NULL) {
+            ARESTA *aux = atual;
+            atual = atual->prox;
+
+            free(aux);
+        }
+    }
+
+    free(grafo);
+}
