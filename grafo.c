@@ -1,11 +1,12 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include "grafo.h"
 
 GRAFO *criarGrafo() {
     GRAFO *grafo = malloc(sizeof(GRAFO));
 
     if (grafo == NULL) {
-        printf("Erro durante alocação da memória para o grafo./n");
+        printf("Erro durante alocação da memória para o grafo.\n");
         return NULL;
     }
 
@@ -40,7 +41,7 @@ void adicionarAresta(GRAFO *grafo, int origem, int destino, int tempo) {
     grafo->vertices[origem].lista = nova;
 }
 
-void montarGrado(GRAFO *grafo) {
+void montarGrafo(GRAFO *grafo) {
     adicionarAresta(grafo, 0, 1, 5); // A -> B
     adicionarAresta(grafo, 0, 2, 12); // A -> C
 
