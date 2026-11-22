@@ -18,6 +18,13 @@ GRAFO *criarGrafo() {
 }
 
 void adicionarAresta(GRAFO *grafo, int origem, int destino, int tempo) {
+    if (grafo == NULL ||
+        origem < 0 || origem >= QTD_VERTICES ||
+        destino < 0 || destino >= QTD_VERTICES ||
+        tempo < 0) {
+        return;
+    }
+
     ARESTA *nova = malloc(sizeof(ARESTA));
 
     if (nova == NULL) {
