@@ -33,6 +33,16 @@ encaminhamento.exe
 
 Ao iniciar, utilize o menu interativo para selecionar o algoritmo de busca e o vértice de origem.
 
+
+### Compilação alternativa com Makefile (opcional)
+
+| Comando | Descrição |
+| --- | --- |
+| `make` | Compilar o programa |
+| `make run` | Compilar e executar |
+| `make test` | Executar os testes |
+| `make clean` | Remover os executáveis |
+
 ## 📍 Integrantes
 
 - João Pinho
