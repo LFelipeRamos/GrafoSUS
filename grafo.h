@@ -24,4 +24,9 @@ void montarGrafo(GRAFO *grafo);
 void exibirGrafo(GRAFO *grafo);
 void liberarGrafo(GRAFO *grafo);
 
+void reiniciarBusca();
+int dfs(GRAFO *grafo, int atual, int destino);
+int bfs(GRAFO *grafo, int origem, int destino);
+void exibirResultado(GRAFO *grafo, int encontrado);
+
 #endif
