@@ -33,8 +33,6 @@ encaminhamento.exe
 
 Ao iniciar, utilize o menu interativo para selecionar o algoritmo de busca e o vértice de origem.
 
----
-
 ## 📍 Integrantes
 
 - João Pinho
